@@ -9,41 +9,42 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="Name" />
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Phone Number" />
+        android:hint="Phone Number" />
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Address" />
+        android:hint="Address" />
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/website"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Website" />
+        android:hint="Website" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
+            android:id="@+id/smile"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_weight="1"
@@ -51,6 +52,7 @@
             android:clickable="true"
             />
         <ImageView
+            android:id="@+id/sad"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
@@ -59,6 +61,7 @@
             android:clickable="true"
             />
         <ImageView
+            android:id="@+id/astonishedEye"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_weight="1"

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
@@ -13,5 +14,12 @@
         android:text="Create Contact">
 
     </Button>
+
+    <TextView
+        android:id="@+id/contactView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
 
 </LinearLayout>
