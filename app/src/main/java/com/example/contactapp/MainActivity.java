@@ -6,19 +6,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.example.contactapp.R;
 public class MainActivity extends AppCompatActivity {
     Button createContact;
-    TextView contactView;
+    LinearLayout contactView;
+    ImageView ismile,icall,iaddress,iwebsite;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         contactView = findViewById(R.id.contactView);
         createContact = findViewById(R.id.createContact);
-        
-        contactView = findViewById(R.id.contactView);
+        ismile = findViewById(R.id.ismile);
+        icall = findViewById(R.id.icall);
+        iaddress =findViewById(R.id.iaddress);
+        iwebsite = findViewById(R.id.iwebsite);
+
+
         contactView.setVisibility(View.GONE);
         
         createContact.setOnClickListener(new View.OnClickListener() {
@@ -28,25 +36,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         // You can be pretty confident that the intent will not be null here.
-        Intent intent = getIntent();
+       // Intent intent = getIntent();
 
-        // Get the extras (if there are any)
-        Bundle extras = intent.getExtras();
-        String data="";
-        if (extras != null) {
-            if (extras.containsKey("name")) {
-                //contactView.setVisibility(View.GONE);
-                String name = extras.getString("name");
-                String phone = extras.getString("phone");
-                String address = extras.getString("address");
-                String website = extras.getString("website");
-                //contactView.setText("New Data");
-                contactView.setText("Name: "+name+"\nphone: "+phone+"\naddress: "+address+"\nwebsite: "+website);
-                contactView.setVisibility(View.VISIBLE);
-                // TODO: Do something with the value of isNew.
-            }
-        }
-        
+
         /*contactView.setText(data);
         
          

@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.EditText;
 import com.example.contactapp.R;
 public class Main2Activity extends AppCompatActivity  {
 
     ImageView imageView1,imageView2,imageView3;
-    TextView contactView;
+    LinearLayout contactView;
     EditText name,phone,address,website;
 
 
@@ -32,10 +33,10 @@ public class Main2Activity extends AppCompatActivity  {
         address = findViewById(R.id.address);
         website = findViewById(R.id.website);
         
-        static String nameText = name.getText().toString();
-        static String phoneText = phone.getText().toString();
-        static String addressText = address.getText().toString();
-        static String websiteText = website.getText().toString();
+         final String nameText = name.getText().toString();
+         final String phoneText = phone.getText().toString();
+         final String addressText = address.getText().toString();
+         final String websiteText = website.getText().toString();
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
