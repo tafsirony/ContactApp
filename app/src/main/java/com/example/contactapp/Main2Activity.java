@@ -13,6 +13,7 @@ public class Main2Activity extends AppCompatActivity  {
 
     ImageView imageView1,imageView2,imageView3;
     TextView contactView;
+    EditText name,phone,address,website;
 
 
     @Override
@@ -24,31 +25,44 @@ public class Main2Activity extends AppCompatActivity  {
         imageView1 = findViewById(R.id.smile);
         imageView2 = findViewById(R.id.sad);
         imageView3 = findViewById(R.id.astonishedEye);
-
+        
+        name = findViewById(R.id.name);
+        phone = findViewById(R.id.phone);
+        address = findViewById(R.id.address);
+        website = findViewById(R.id.website);
+        
+        String nameText = name.getText().toString();
+        String phoneText = phone.getText().toString();
+        String addressText = address.getText().toString();
+        String websiteText = website.getText().toString();
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity3();
+                openActivity3(nameText,phoneText,addressText,websiteText);
             }
         });
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity3();
+                openActivity3(nameText,phoneText,addressText,websiteText);
             }
         });
         imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity3();
+                openActivity3(nameText,phoneText,addressText,websiteText);
             }
         });
 
 
     }
-    public void openActivity3(){
+    public void openActivity3(String name,String phone,String address,String website){
 
         Intent intent = new Intent(this,MainActivity.class);
+        intent.putExtra("name", name);
+        intent.putExtra("phone", phone);
+        intent.putExtra("address", address);
+        intent.putExtra("website", website);
         startActivity(intent);
 
     }
