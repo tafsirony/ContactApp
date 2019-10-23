@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.widget.EditText;
+import com.example.contactapp.R;
 public class Main2Activity extends AppCompatActivity  {
 
     ImageView imageView1,imageView2,imageView3;
