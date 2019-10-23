@@ -32,10 +32,10 @@ public class Main2Activity extends AppCompatActivity  {
         address = findViewById(R.id.address);
         website = findViewById(R.id.website);
         
-        String nameText = name.getText().toString();
-        String phoneText = phone.getText().toString();
-        String addressText = address.getText().toString();
-        String websiteText = website.getText().toString();
+        static String nameText = name.getText().toString();
+        static String phoneText = phone.getText().toString();
+        static String addressText = address.getText().toString();
+        static String websiteText = website.getText().toString();
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
